@@ -1,0 +1,416 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap' %}" rel="stylesheet">
+
+    <title>STAS BANK - FORM PAGE</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-finance-business.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+<!--
+
+Finance Business TemplateMo
+
+https://templatemo.com/tm-545-finance-business
+
+-->
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <div class="sub-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-xs-12">
+            <ul class="left-info">
+              <li><a href="#"><i class="fa fa-clock-o"></i>Mon-Fri 09:00-05:00</a></li>
+              <li><a href="#"><i class="fa fa-phone"></i>090-080-0760</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="right-icons">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><h2>STAS BANK</h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about">About Us</a>
+              </li>
+<!--              <li class="nav-item">-->
+<!--                <a class="nav-link" href="services.html">Our Services</a>-->
+<!--              </li>-->
+<!--              <li class="nav-item active">-->
+<!--                <a class="nav-link" href="contact.html">Contact Us</a>-->
+<!--              </li>-->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>FORM</h1>
+            <span>feel free to fill the form to be a part of our family!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callback-form contact-us" style="margin-top: 0;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Create Your <em>Application</em></h2>
+              <span>Fill the form with your correct details</span>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="contact-form">
+              <form  action="form" method="post">
+                {% csrf_token %}
+                <div class="row">
+
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*"
+                             placeholder="E-Mail Address" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                    <fieldset>
+                      <select name="gender" class="form-control" id="gender"
+                              style="border-radius: 20px; padding-right: 30px; background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D"
+                              http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width%3D"12" height%3D"8"%3E%3Cpath d%3D"M0 0 L6 8
+                      L12 0"%3E%3C%2Fpath%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right
+                      center; background-size: 12px 8px;" required="">
+                      <option value="" disabled selected>Select Gender</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+                      </select>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-sm-12"
+                       style="border-radius: 20px; padding-right: 30px; background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D"
+                       http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg
+                  " width%3D"12" height%3D"8"%3E%3Cpath d%3D"M0 0 L6 8 L12 0"%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
+                  background-repeat: no-repeat; background-position: right center; background-size: 12px 8px;">
+                  <fieldset>
+                    <input name="dob" type="date" class="form-control" id="dob" required="">
+                  </fieldset>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12"
+                     style="border-radius: 20px; padding-right: 30px; background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D"
+                     http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg
+                " width%3D"12" height%3D"8"%3E%3Cpath d%3D"M0 0 L6 8 L12 0"%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
+                background-repeat: no-repeat; background-position: right center; background-size: 12px 8px;">
+                <fieldset>
+                  <input name="phone" type="tel" class="form-control" id="phone" placeholder="Phone Number"
+                         required="">
+                </fieldset>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12"
+                 style="border-radius: 20px; padding-right: 30px; background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D"
+                 http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg
+            " width%3D"12" height%3D"8"%3E%3Cpath d%3D"M0 0 L6 8 L12 0"%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat; background-position: right center; background-size: 12px 8px;">
+            <fieldset>
+              <input name="age" type="number" class="form-control" id="age" placeholder="Age" required="">
+            </fieldset>
+          </div>
+          <div class="col-lg-12"
+               style="border-radius: 20px; padding-right: 30px; background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D"
+               http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg
+          " width%3D"12" height%3D"8"%3E%3Cpath d%3D"M0 0 L6 8 L12 0"%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
+          background-repeat: no-repeat; background-position: right center; background-size: 12px 8px;">
+          <fieldset>
+              <textarea name="address" rows="4" class="form-control" id="address" placeholder="Address"
+                        required=""></textarea>
+          </fieldset>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <fieldset>
+            <select name="district" class="form-control" id="district" required=""
+                    style="border-radius: 20px; padding-right: 30px; background-color: white; background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 width%3D%2212%22 height%3D%228%22%3E%3Cpath d%3D%22M0 0 L6 8 L12 0%22%3E%3C/path%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right center; background-size: 12px 8px; -webkit-appearance: none; -moz-appearance: none; appearance: none;">
+              <option value="" disabled selected>Select District</option>
+              <option value="ernakulam">Ernakulam</option>
+              <option value="trivandrum">Trivandrum</option>
+              <option value="alappuzha">Alappuzha</option>
+              <!-- Add more district options as needed -->
+            </select>
+          </fieldset>
+        </div>
+
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <fieldset>
+            <select name="branch" class="form-control" id="branch" required=""
+                    style="border-radius: 20px; padding-right: 30px; background-color: white; background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 width%3D%2212%22 height%3D%228%22%3E%3Cpath d%3D%22M0 0 L6 8 L12 0%22%3E%3C/path%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right center; background-size: 12px 8px; -webkit-appearance: none; -moz-appearance: none; appearance: none;">
+              <option value="" disabled selected>Select Branch</option>
+            </select>
+          </fieldset>
+        </div>
+
+        <script>
+          const districtDropdown = document.getElementById('district');
+          const branchDropdown = document.getElementById('branch');
+
+          const branchesByDistrict = {
+            ernakulam: ['Aluva', 'Edappally', 'Kakkanad'],
+            trivandrum: ['Palayam', 'Pallickal', 'Thampanur'],
+            alappuzha: ['Haripad', 'Ambalappuzha', 'Mavelikkara']
+            // Add more districts and their respective branches as needed
+          };
+
+          function updateBranches() {
+            const selectedDistrict = districtDropdown.value;
+            branchDropdown.innerHTML = '<option value="" disabled selected>Select Branch</option>';
+
+            if (selectedDistrict in branchesByDistrict) {
+              const branches = branchesByDistrict[selectedDistrict];
+              branches.forEach(branch => {
+                const option = document.createElement('option');
+                option.value = branch;
+                option.textContent = branch;
+                branchDropdown.appendChild(option);
+              });
+            }
+          }
+
+          districtDropdown.addEventListener('change', updateBranches);
+        </script>
+
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <fieldset>
+            <select name="accountType" class="form-control" id="accountType" required=""
+                    style="border-radius: 20px; padding-right: 30px; background-color: white; background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 width%3D%2212%22 height%3D%228%22%3E%3Cpath d%3D%22M0 0 L6 8 L12 0%22%3E%3C/path%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right center; background-size: 12px 8px; -webkit-appearance: none; -moz-appearance: none; appearance: none;">
+              <option value="" disabled selected>Select Account Type</option>
+              <option value="savings">Savings Account</option>
+              <option value="current">Current Account</option>
+              <option value="fixedDeposit">Fixed Deposit</option>
+              <!-- Add more account type options as needed -->
+            </select>
+          </fieldset>
+        </div>
+        <br><br><br>
+
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <fieldset>
+            <select name="paymentType" class="form-control" id="paymentType" required=""
+                    style="border-radius: 20px; padding-right: 30px;  background-color: white; background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 width%3D%2212%22 height%3D%228%22%3E%3Cpath d%3D%22M0 0 L6 8 L12 0%22%3E%3C/path%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right center; background-size: 12px 8px; -webkit-appearance: none; -moz-appearance: none; appearance: none;">
+              <option value="" disabled selected>Select Payment Type</option>
+              <option value="debit">Debit Card</option>
+              <option value="credit">Credit Card</option>
+              <option value="cheque">Cheque Book</option>
+            </select>
+          </fieldset>
+        </div>
+
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <div class="col-lg-12">
+            <fieldset>
+              <button type="submit" id="form-submit" class="filled-button">Submit</button>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      </form>
+      {% if message %}
+    <p>{{ message }}</p>
+    <a href="/">Return to Home</a>
+    {% endif %}
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div id="map">
+<!-- How to change your own map point
+	1. Go to Google Maps
+	2. Click on your location point
+	3. Click "Share" and choose "Embed map" tab
+	4. Copy only URL and paste it within the src="" field below
+-->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126545.67271717351!2d76.84162603294246!3d8.49980534959933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bbb805bbcd47%3A0x15439fab5c5c81cb!2sThiruvananthapuram%2C%20Kerala!5e0!3m2!1sen!2sin!4v1691401527840!5m2!1sen!2sin" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+<!--    <div class="partners contact-partners">-->
+<!--      <div class="container">-->
+<!--        <div class="row">-->
+<!--          <div class="col-md-12">-->
+<!--            <div class="owl-partners owl-carousel">-->
+<!--              <div class="partner-item">-->
+<!--                <img src="{% static 'assets/images/client-01.png' %}" alt="">-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+
+    <!-- Footer Starts Here -->
+   <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 footer-item">
+            <h4>Finance Business</h4>
+            <p>You can contact us through following social media applications.</p>
+            <ul class="social-icons">
+              <li><a rel="nofollow" href="https://fb.com/templatemo" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-item">
+            <h4>Banking</h4>
+            <ul class="menu-list">
+              <li><a href="#">STAS BANK</a></li>
+              <li><a href="#">Website</a></li>
+              <li><a href="#">Prototype</a></li>
+              <li><a href="#">Project</a></li>
+              <li><a href="#">Study</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-item">
+            <h4>Additional Information</h4>
+            <ul class="menu-list">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">How We Work</a></li>
+              <li><a href="#">Quick Support</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-item">
+            <h4>Special Thanks</h4>
+            <ul class="menu-list">
+              <li><a href="#">Inmakes</a></li>
+              <li><a href="#">Python</a></li>
+              <li><a href="#">Django</a></li>
+              <li><a href="#">Flask</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+          </div>
+<!--          <div class="col-md-3 footer-item last-item">-->
+<!--            <h4>Contact Us</h4>-->
+<!--            <div class="contact-form">-->
+<!--              <form id="contact footer-contact" action="" method="post">-->
+<!--                <div class="row">-->
+<!--                  <div class="col-lg-12 col-md-12 col-sm-12">-->
+<!--                    <fieldset>-->
+<!--                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">-->
+<!--                    </fieldset>-->
+<!--                  </div>-->
+<!--                  <div class="col-lg-12 col-md-12 col-sm-12">-->
+<!--                    <fieldset>-->
+<!--                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">-->
+<!--                    </fieldset>-->
+<!--                  </div>-->
+<!--                  <div class="col-lg-12">-->
+<!--                    <fieldset>-->
+<!--                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>-->
+<!--                    </fieldset>-->
+<!--                  </div>-->
+<!--                  <div class="col-lg-12">-->
+<!--                    <fieldset>-->
+<!--                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>-->
+<!--                    </fieldset>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </form>-->
+<!--            </div>-->
+<!--          </div>-->
+        </div>
+      </div>
+    </footer>
+    
+    <div class="sub-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p>Copyright &copy; 2023 STAS BANK Co. Ltd.
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Additional Scripts -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script src="{% static 'assets/js/owl.js' %}"></script>
+    <script src="{% static 'assets/js/slick.js' %}"></script>
+    <script src="{% static 'assets/js/accordions.js' %}"></script>
+
+    <script language = "text/Javascript"> 
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+    </script>
+
+  </body>
+</html>
